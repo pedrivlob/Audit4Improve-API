@@ -96,4 +96,8 @@ public class ReportManager implements ReportManagerI {
 		return report;
 	}
 
+	public void addMetric(String metricname ) {
+		this.metric
+		
+	}
 }

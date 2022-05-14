@@ -71,4 +71,4 @@ public interface ReportManagerI {
 	 * <p>Borra el informe que se está manejando actualmente, si la referencia no era nula, según las reglas establecidas por el gestor de persistencia</p>
 	 */
 	public void deleteReport();
-}
+	}

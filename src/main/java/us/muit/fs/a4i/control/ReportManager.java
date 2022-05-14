@@ -22,7 +22,7 @@ public class ReportManager implements ReportManagerI {
 	private RemoteEnquirer enquirer;
 	private ReportFormaterI formater;
 	private IndicatorsCalculator calc;
-	private String entityId;
+	//private String entityId;
 
 	
 
@@ -94,6 +94,22 @@ public class ReportManager implements ReportManagerI {
 	@Override
 	public ReportI getReport() {
 		return report;
+	}
+	
+	public void addMetric(String metricName) {
+		
+	}
+	public void getMetric(String metricName) {
+		
+	}
+	public void addIndicator(String indicatorName) {
+		
+	}
+	public void saveReport() {
+		
+	}
+	public void newReport(String entityId) {
+		
 	}
 
 }

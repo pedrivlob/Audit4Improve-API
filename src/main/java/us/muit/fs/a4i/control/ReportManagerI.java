@@ -71,4 +71,18 @@ public interface ReportManagerI {
 	 * <p>Borra el informe que se está manejando actualmente, si la referencia no era nula, según las reglas establecidas por el gestor de persistencia</p>
 	 */
 	public void deleteReport();
+	/**
+	 * Hecho por mi
+	 * Si report es null los metodos que lo usan deben informar. No se considera composición para permitir reutilizar el mismo
+	 * ReportManager oara el mismo tipo de informe pero correspodiente a distintas entidades
+	 * 
+	 * El infrome se crea al invicar el método newReport, hay que indicar el identificador de la entidad a la que se refiere, en el remoto.
+	 * Se debería comprobar que efectivamente la entidad existe y concuerda con el tipo de informe. Si report no era null antes guarda el informe actual.
+	 */
+	public void addMetric(String metricName);
+	public void getMetric(String metricName);
+	public void addIndicator(String indicatorName);
+	public void saveReport();
+	public void newReport(String entityId);
+	
 }

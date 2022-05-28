@@ -10,6 +10,7 @@ import us.muit.fs.a4i.model.entities.ReportI;
 import us.muit.fs.a4i.model.remote.RemoteEnquirer;
 import us.muit.fs.a4i.persistence.PersistenceManager;
 import us.muit.fs.a4i.persistence.ReportFormaterI;
+import us.muit.fs.a4i.model.entities.Metric;
 
 /**
  * @author isa
@@ -23,6 +24,8 @@ public class ReportManager implements ReportManagerI {
 	private ReportFormaterI formater;
 	private IndicatorsCalculator calc;
 	private String entityId;
+	private Metric metrics;
+
 
 	
 
@@ -57,7 +60,7 @@ public class ReportManager implements ReportManagerI {
 		try {
 			persister.saveReport();
 		} catch (ReportNotDefinedException e) {
-			log.info("No debería entrar aquí porque se acaba de establecer el informe");
+			log.info("No deberï¿½a entrar aquï¿½ porque se acaba de establecer el informe");
 			e.printStackTrace();
 		}
 	}
@@ -89,11 +92,33 @@ public class ReportManager implements ReportManagerI {
 	}
 
 	/**
-	 * Devuelve el informe que está manejando este gestor
+	 * Devuelve el informe que estï¿½ manejando este gestor
 	 */
 	@Override
 	public ReportI getReport() {
 		return report;
 	}
+	public void addMetric(String metricName) {
+		metrics.name = metricName;
+		log.info("Aï¿½adida mï¿½trica "+metricName+" Con nombre "+metricName);
+	}
+	public void getMetric(String metricName){
+		
+	}
+	public void addIndicator(String indicatorName) {
+		
+	}
+	public void saveReport() {
+		
+	}
+	public void newReport(String entityId) {
+		report = enquirer.buildReport(entityId);
+	}
 
+	@Override
+	public String getMetric() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }

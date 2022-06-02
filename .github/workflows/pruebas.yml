@@ -26,3 +26,14 @@ jobs:
         run: |
           chmod +x gradlew        
           ./gradlew build
+  Test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_LOGIN: ${{ github.actor }}
+      GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Pruebas de test
+        run: |
+          chmod +x gradlew 
+          ./gradlew test

@@ -1,5 +1,6 @@
 name: Pregunta 12 pedrivlob
 on:
+  push:
   workflow_dispatch:
   issues:
     types: [opened, transferred]

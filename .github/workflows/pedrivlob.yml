@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   issues:
-    types: [opened, transferred]
+    types: [opened, transferred, assigned]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest

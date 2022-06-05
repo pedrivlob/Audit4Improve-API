@@ -1,4 +1,4 @@
-name: Flujo de trabajo para la pregunta 12
+name: Pregunta 12 pedrivlob
 on:
   workflow_dispatch:
   issues:
